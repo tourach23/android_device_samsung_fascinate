@@ -50,8 +50,6 @@ WIFI_DRIVER_MODULE_NAME     := ""
 
 BOARD_USES_GENERIC_AUDIO := false
 
-BOARD_KERNEL_CMDLINE := root=/dev/tfsr6 rootfstype=cramfs console=ttySAC2,115200 init=/linuxrc
-
 BOARD_HAVE_BLUETOOTH := true
 BT_USE_BTL_IF := true
 BT_ALT_STACK := true
@@ -61,12 +59,13 @@ BRCM_BT_USE_BTL_IF := true
 
 BOARD_EGL_CFG := device/samsung/galaxys/egl.cfg
 
-# # cat /proc/mtd
-# dev:    size   erasesize  name
-BOARD_BOOTIMAGE_PARTITION_SIZE := 
-BOARD_RECOVERYIMAGE_PARTITION_SIZE := 
-BOARD_SYSTEMIMAGE_PARTITION_SIZE := 
-BOARD_USERDATAIMAGE_PARTITION_SIZE := 
+BOARD_KERNEL_CMDLINE := no_console_suspend=1 console=null
+BOARD_KERNEL_BASE := 0x02e00000
+
+BOARD_BOOTIMAGE_MAX_SIZE := $(call image-size-from-data-size,0x00280000)
+BOARD_RECOVERYIMAGE_MAX_SIZE := $(call image-size-from-data-size,0x00500000)
+BOARD_SYSTEMIMAGE_MAX_SIZE := $(call image-size-from-data-size,0x07500000)
+BOARD_USERDATAIMAGE_MAX_SIZE := $(call image-size-from-data-size,0x04ac0000)
 # The size of a block that can be marked bad.
 BOARD_FLASH_BLOCK_SIZE := 131072
 	
