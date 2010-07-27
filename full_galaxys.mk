@@ -120,6 +120,34 @@ PRODUCT_COPY_FILES += \
     device/samsung/galaxys/prebuilt/ril/efsd30:system/bin/efsd30 \
     device/samsung/galaxys/prebuilt/ril/rilclient-test:system/bin/rilclient-test
 
+#
+# OMX
+#
+PRODUCT_COPY_FILES += \
+    device/samsung/galaxys/prebuilt/omx/libs263domxoc.so:system/lib/libs263domxoc.so \
+    device/samsung/galaxys/prebuilt/omx/libs263eomxoc.so:system/lib/libs263eomxoc.so \
+    device/samsung/galaxys/prebuilt/omx/libs264domxoc.so:system/lib/libs264domxoc.so \
+    device/samsung/galaxys/prebuilt/omx/libs264eomxoc.so:system/lib/libs264eomxoc.so \
+    device/samsung/galaxys/prebuilt/omx/libsaacdomxoc.so:system/lib/libsaacdomxoc.so \
+    device/samsung/galaxys/prebuilt/omx/libsaaceomxoc.so:system/lib/libsaaceomxoc.so \
+    device/samsung/galaxys/prebuilt/omx/libsac3domxoc.so:system/lib/libsac3domxoc.so \
+    device/samsung/galaxys/prebuilt/omx/libsamrdomxoc.so:system/lib/libsamrdomxoc.so \
+    device/samsung/galaxys/prebuilt/omx/libsamreomxoc.so:system/lib/libsamreomxoc.so \
+    device/samsung/galaxys/prebuilt/omx/libsdiv3domxoc.so:system/lib/libsdiv3domxoc.so \
+    device/samsung/galaxys/prebuilt/omx/libsflacdomxoc.so:system/lib/libsflacdomxoc.so \
+    device/samsung/galaxys/prebuilt/omx/libsmp3domxoc.so:system/lib/libsmp3domxoc.so \
+    device/samsung/galaxys/prebuilt/omx/libsmp4fmocn.so:system/lib/libsmp4fmocn.so \
+    device/samsung/galaxys/prebuilt/omx/libsmp4vdomxoc.so:system/lib/libsmp4vdomxoc.so \
+    device/samsung/galaxys/prebuilt/omx/libsmp4veomxoc.so:system/lib/libsmp4veomxoc.so \
+    device/samsung/galaxys/prebuilt/omx/libsvc1domxoc.so:system/lib/libsvc1domxoc.so \
+    device/samsung/galaxys/prebuilt/omx/libswmadomxoc.so:system/lib/libswmadomxoc.so \
+    device/samsung/galaxys/prebuilt/omx/libswmv7domxoc.so:system/lib/libswmv7domxoc.so \
+    device/samsung/galaxys/prebuilt/omx/libswmv8domxoc.so:system/lib/libswmv8domxoc.so \
+
+# libaudio
+PRODUCT_COPY_FILES += device/samsung/galaxys/prebuilt/audio/libaudio.so:system/lib/libaudio.so
+
+
 # we have enough storage space to hold precise GC data
 PRODUCT_TAGS += dalvik.gc.type-precise
 PRODUCT_PROPERTY_OVERRIDES += \
