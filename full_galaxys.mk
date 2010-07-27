@@ -109,6 +109,16 @@ PRODUCT_COPY_FILES += \
     device/samsung/galaxys/prebuilt/vold.fstab:system/etc/vold.fstab 
 
 #
+# Camera
+#
+PRODUCT_COPY_FILES += \
+    device/samsung/galaxys/prebuilt/camera\libarccamera.so:system/lib/libarccamera.so \
+    device/samsung/galaxys/prebuilt/camera\libcamerafirmwarejni.so:system/lib/libcamerafirmwarejni.so \
+    device/samsung/galaxys/prebuilt/camera\libcamera.so:system/lib/libcamera.so \
+    device/samsung/galaxys/prebuilt/camera\libseccameraadaptor.so:system/lib/libseccameraadaptor.so \
+    device/samsung/galaxys/prebuilt/camera\libseccamera.so:system/lib/libseccamera.so
+
+#
 # RIL
 #
 PRODUCT_COPY_FILES += \
