@@ -36,18 +36,6 @@ TARGET_BOARD_PLATFORM_GPU := POWERVR_SGX540_120
 TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
 
-TARGET_BOOTLOADER_BOARD_NAME := galaxys
-
-# Wifi related defines
-BOARD_WPA_SUPPLICANT_DRIVER := 
-WPA_SUPPLICANT_VERSION      := 
-BOARD_WLAN_DEVICE           := 
-WIFI_DRIVER_MODULE_PATH     := ""
-WIFI_DRIVER_FW_STA_PATH     := ""
-WIFI_DRIVER_FW_AP_PATH      := ""
-WIFI_DRIVER_MODULE_ARG      := ""
-WIFI_DRIVER_MODULE_NAME     := ""
-
 BOARD_USES_GENERIC_AUDIO := false
 
 BOARD_HAVE_BLUETOOTH := true
@@ -93,7 +81,3 @@ BOARD_CACHE_FILESYSTEM_OPTIONS := llw,check=no,nosuid,nodev
 #BOARD_SDCARD_DEVICE_PRIMARY := /dev/block/mmcblk1
 #BOARD_SDCARD_DEVICE_SECONDARY := /dev/block/mmcblk1p1
 BOARD_SDEXT_DEVICE := /dev/block/mmcblk1p2
-	
-TARGET_RECOVERY_UI_LIB := librecovery_ui_galaxys librecovery_ui_generic
-
-TARGET_RECOVERY_UPDATER_LIBS += librecovery_updater_samsung
