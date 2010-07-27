@@ -154,8 +154,7 @@ PRODUCT_COPY_FILES += \
     device/samsung/galaxys/prebuilt/omx/libswmv7domxoc.so:system/lib/libswmv7domxoc.so \
     device/samsung/galaxys/prebuilt/omx/libswmv8domxoc.so:system/lib/libswmv8domxoc.so \
 
-# libaudio / libspeech
-PRODUCT_COPY_FILES += device/samsung/galaxys/prebuilt/audio/libaudio.so:system/lib/libaudio.so
+# libspeech
 PRODUCT_COPY_FILES += device/samsung/galaxys/prebuilt/audio/libspeech.so:system/lib/libspeech.so
 
 
