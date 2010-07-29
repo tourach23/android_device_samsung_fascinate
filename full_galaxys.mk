@@ -123,7 +123,7 @@ PRODUCT_COPY_FILES += \
 #
 PRODUCT_COPY_FILES += \
     device/samsung/galaxys/prebuilt/ril/libril.so:system/lib/libril.so \
-    device/samsung/galaxys/prebuilt/ril/libril-reference.so:system/lib/libril-reference.so \
+    device/samsung/galaxys/prebuilt/ril/libreference-ril.so:system/lib/libreference-ril.so \
     device/samsung/galaxys/prebuilt/ril/libsecril-client.so:system/lib/libsecril-client.so \
     device/samsung/galaxys/prebuilt/ril/drexe:system/bin/drexe \
     device/samsung/galaxys/prebuilt/ril/efsd:system/bin/efsd \
