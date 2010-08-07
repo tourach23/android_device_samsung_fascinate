@@ -24,7 +24,7 @@
 USE_CAMERA_STUB := true
 
 # inherit from the proprietary version
--include vendor/samsung/galaxys/BoardConfigVendor.mk
+-include vendor/samsung/vibrant/BoardConfigVendor.mk
 
 TARGET_NO_BOOTLOADER := true
 TARGET_NO_RECOVERY := true
@@ -45,7 +45,7 @@ BT_ALT_STACK := true
 BRCM_BTL_INCLUDE_A2DP := true
 BRCM_BT_USE_BTL_IF := true
 
-BOARD_EGL_CFG := device/samsung/galaxys/prebuilt/egl/egl.cfg
+BOARD_EGL_CFG := device/samsung/vibrant/prebuilt/egl/egl.cfg
 
 BOARD_KERNEL_CMDLINE := no_console_suspend=1 console=null
 BOARD_KERNEL_BASE := 0x02e00000

@@ -29,4 +29,4 @@ $(call add-radio-file,recovery/images/bitmap_size.txt)
 include $(CLEAR_VARS)
 
 # include the non-open-source counterpart to this file
--include vendor/samsung/galaxys/AndroidBoardVendor.mk
+-include vendor/samsung/vibrant/AndroidBoardVendor.mk
