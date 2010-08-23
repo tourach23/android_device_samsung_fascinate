@@ -2,8 +2,8 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
 # Discard inherited values and use our own instead.
-PRODUCT_NAME := Vibrant
-PRODUCT_DEVICE := SGH-T959
+PRODUCT_NAME := Samsung Galaxy S Vibrant
+PRODUCT_DEVICE := Vibrant
 PRODUCT_MODEL := SGH-T959
 PRODUCT_BRAND := samsung
 PRODUCT_MANUFACTURER := Samsung
