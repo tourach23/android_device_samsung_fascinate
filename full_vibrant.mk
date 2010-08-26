@@ -8,13 +8,6 @@ PRODUCT_MODEL := SGH-T959
 PRODUCT_BRAND := samsung
 PRODUCT_MANUFACTURER := Samsung
 
-# Kernel Targets
-ifeq ($(TARGET_PREBUILT_KERNEL),)
-ifeq ($(TARGET_KERNEL_CONFIG),)
-TARGET_PREBUILT_KERNEL := device/samsung/vibrant/kernel
-endif # TARGET_KERNEL_CONFIG
-endif # TARGET_PREBUILT_KERNEL
-
 # The gps config appropriate for this device
 $(call inherit-product, device/common/gps/gps_us_supl.mk)
 
@@ -157,6 +150,14 @@ PRODUCT_COPY_FILES += \
 # libspeech
 PRODUCT_COPY_FILES += device/samsung/vibrant/prebuilt/audio/libspeech.so:system/lib/libspeech.so
 
+ifeq ($(TARGET_PREBUILT_KERNEL),)
+LOCAL_KERNEL := device/samsung/vibrant/kernel
+else
+LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
+endif
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_KERNEL):kernel
 
 # we have enough storage space to hold precise GC data
 PRODUCT_TAGS += dalvik.gc.type-precise
