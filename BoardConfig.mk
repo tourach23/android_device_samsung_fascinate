@@ -36,12 +36,14 @@ TARGET_BOARD_PLATFORM_GPU := POWERVR_SGX540_120
 TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
 
+# Sound related defines
 BOARD_USES_ALSA_AUDIO := true
+BUILD_WITH_ALSA_UTILS := true
 
+# Bluetooth related defines
 BOARD_HAVE_BLUETOOTH := true
 BT_USE_BTL_IF := true
 BT_ALT_STACK := true
-
 BRCM_BTL_INCLUDE_A2DP := true
 BRCM_BT_USE_BTL_IF := true
 
