@@ -83,5 +83,6 @@ BOARD_CACHE_FILESYSTEM_OPTIONS := llw,check=no,nosuid,nodev
 BOARD_SDEXT_DEVICE := /dev/block/mmcblk1p2
 BOARD_HAS_CUSTOM_WRITE_RAW_IMAGE := true
 BOARD_UPDATER_LIBS := libsamsungupdater
+BOARD_USES_REDBEND_UA := true
 
 TARGET_PREBUILT_KERNEL := device/samsung/vibrant/kernel
