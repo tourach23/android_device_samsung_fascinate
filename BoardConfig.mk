@@ -27,8 +27,8 @@ USE_CAMERA_STUB := true
 -include vendor/samsung/vibrant/BoardConfigVendor.mk
 
 TARGET_NO_BOOTLOADER := true
-TARGET_NO_RECOVERY := true
-TARGET_NO_KERNEL := true
+#TARGET_NO_RECOVERY := true
+#TARGET_NO_KERNEL := true
 
 TARGET_BOARD_PLATFORM := s5pc110
 TARGET_BOARD_PLATFORM_GPU := POWERVR_SGX540_120
@@ -81,4 +81,7 @@ BOARD_CACHE_FILESYSTEM_OPTIONS := llw,check=no,nosuid,nodev
 #BOARD_SDCARD_DEVICE_PRIMARY := /dev/block/mmcblk1
 #BOARD_SDCARD_DEVICE_SECONDARY := /dev/block/mmcblk1p1
 BOARD_SDEXT_DEVICE := /dev/block/mmcblk1p2
+BOARD_HAS_CUSTOM_WRITE_RAW_IMAGE := true
+BOARD_UPDATER_LIBS := libsamsungupdater
+
 TARGET_PREBUILT_KERNEL := device/samsung/vibrant/kernel

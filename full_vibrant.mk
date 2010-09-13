@@ -1,22 +1,12 @@
 #
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
-# Discard inherited values and use our own instead.
-PRODUCT_NAME := Samsung Galaxy S Vibrant
-PRODUCT_DEVICE := vibrant
-PRODUCT_MODEL := SGH-T959
-PRODUCT_BRAND := samsung
-PRODUCT_MANUFACTURER := Samsung
-
 # The gps config appropriate for this device
 $(call inherit-product, device/common/gps/gps_us_supl.mk)
 
 
 PRODUCT_COPY_FILES += \
     device/samsung/vibrant/init.smdkc110.rc:root/init.smdkc110.rc
-
-PRODUCT_POLICY := android.policy_phone
-
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.sf.lcd_density=240 \
@@ -168,5 +158,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Vibrant uses high-density artwork where available
 PRODUCT_LOCALES := hdpi
 
+$(call inherit-product, build/target/product/full.mk)
 
-
+PRODUCT_NAME := full_vibrant
+PRODUCT_DEVICE := vibrant
+PRODUCT_MODEL := SGH-T959
+PRODUCT_BRAND := samsung
+PRODUCT_MANUFACTURER := Samsung
