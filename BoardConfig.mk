@@ -33,8 +33,10 @@ TARGET_NO_BOOTLOADER := true
 TARGET_BOARD_PLATFORM := s5pc110
 TARGET_BOARD_PLATFORM_GPU := POWERVR_SGX540_120
 
+# ARMv7-A Cortex-A8 architecture
 TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
+TARGET_ARCH_VARIANT := armv7-a-neon
 
 # Sound related defines
 BOARD_USES_ALSA_AUDIO := true
