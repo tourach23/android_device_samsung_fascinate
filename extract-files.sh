@@ -40,10 +40,8 @@ etc/asound.conf
 etc/wifi/nvram_net.txt
 etc/wifi/nvram_mfg.txt
 etc/wifi/bcm4329_aps.bin
-etc/wifi/bcm4329_apsta.bin
 etc/wifi/bcm4329_mfg.bin
 etc/wifi/bcm4329_sta.bin
-etc/wifi.conf
 
 lib/libarccamera.so
 lib/libcamerafirmwarejni.so
@@ -81,7 +79,7 @@ lib/egl/egl.cfg
 lib/egl/libEGL_POWERVR_SGX540_120.so
 lib/egl/libGLES_android.so
 lib/egl/libGLESv1_CM_POWERVR_SGX540_120.so
-lib/egl/libGLESv2_POWERVR_SGX540_1libsecgps20.so
+lib/egl/libGLESv2_POWERVR_SGX540_120.so
 
 lib/hw/copybit.s5pc110.so
 lib/hw/lights.default.so
@@ -120,7 +118,6 @@ PRODUCT_COPY_FILES += \\
     vendor/samsung/__DEVICE__/proprietary/etc/wifi/bcm4329_aps.bin:system/etc/wifi/bcm4329_aps.bin \\
     vendor/samsung/__DEVICE__/proprietary/etc/wifi/bcm4329_mfg.bin:system/etc/wifi/bcm4329_mfg.bin \\
     vendor/samsung/__DEVICE__/proprietary/etc/wifi/bcm4329_sta.bin:system/etc/wifi/bcm4329_sta.bin \\
-    vendor/samsung/__DEVICE__/proprietary/etc/wifi/wifi.conf:system/etc/wifi/wifi.conf \\
     vendor/samsung/__DEVICE__/proprietary/etc/wifi/wlservice:system/bin/wlservice
 
 #
