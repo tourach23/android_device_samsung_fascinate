@@ -28,50 +28,7 @@ PRODUCT_COPY_FILES += \
     frameworks/base/data/etc/android.hardware.sensor.light.xml:system/etc/permissions/android.hardware.sensor.light.xml \
     frameworks/base/data/etc/android.hardware.touchscreen.multitouch.xml:system/etc/permissions/android.hardware.touchscreen.multitouch.xml
 
-#
-# Copy Vibrant specific prebuilt files
-#
-
-#
-# Wifi
-#
-PRODUCT_COPY_FILES += \
-    device/samsung/SGH-T959/prebuilt/wifi/libwlservice.so:system/lib/libwlservice.so \
-    device/samsung/SGH-T959/prebuilt/wifi/nvram_net.txt:system/etc/wifi/nvram_net.txt \
-    device/samsung/SGH-T959/prebuilt/wifi/nvram_mfg.txt:system/etc/wifi/nvram_mfg.txt \
-    device/samsung/SGH-T959/prebuilt/wifi/bcm4329_aps.bin:system/etc/wifi/bcm4329_aps.bin \
-    device/samsung/SGH-T959/prebuilt/wifi/bcm4329_mfg.bin:system/etc/wifi/bcm4329_mfg.bin \
-    device/samsung/SGH-T959/prebuilt/wifi/bcm4329_sta.bin:system/etc/wifi/bcm4329_sta.bin \
-    device/samsung/SGH-T959/prebuilt/wifi/wifi.conf:system/etc/wifi/wifi.conf \
-    device/samsung/SGH-T959/prebuilt/wifi/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf \
-    device/samsung/SGH-T959/prebuilt/wifi/dhcpcd.conf:system/etc/dhcpcd/dhcpcd.conf \
-    device/samsung/SGH-T959/prebuilt/wifi/wlservice:system/bin/wlservice \
-    device/samsung/SGH-T959/prebuilt/wifi/wpa_supplicant:system/bin/wpa_supplicant
-
-
-
-#
-# Display (3D)
-#
-PRODUCT_COPY_FILES += \
-    device/samsung/SGH-T959/prebuilt/egl/egl.cfg:system/lib/egl/egl.cfg \
-    device/samsung/SGH-T959/prebuilt/egl/libEGL_POWERVR_SGX540_120.so:system/lib/egl/libEGL_POWERVR_SGX540_120.so \
-    device/samsung/SGH-T959/prebuilt/egl/libGLES_android.so:system/lib/egl/libGLES_android.so \
-    device/samsung/SGH-T959/prebuilt/egl/libGLESv1_CM_POWERVR_SGX540_120.so:system/lib/egl/libGLESv1_CM_POWERVR_SGX540_120.so \
-    device/samsung/SGH-T959/prebuilt/egl/libGLESv2_POWERVR_SGX540_120.so:system/lib/egl/libGLESv2_POWERVR_SGX540_120.so
-
-#
-# Sensors, Lights etc
-#
-PRODUCT_COPY_FILES += \
-    device/samsung/SGH-T959/prebuilt/hw/copybit.s5pc110.so:system/lib/hw/copybit.s5pc110.so \
-    device/samsung/SGH-T959/prebuilt/hw/lights.default.so:system/lib/hw/lights.default.so \
-    device/samsung/SGH-T959/prebuilt/hw/sensors.SGH-T959.so:system/lib/hw/sensors.SGH-T959.so \
-    device/samsung/SGH-T959/prebuilt/hw/gralloc.s5pc110.so:system/lib/hw/gralloc.s5pc110.so
-
-#
-# Keys
-#
+# Keylayout / Keychars
 PRODUCT_COPY_FILES += \
     device/samsung/SGH-T959/prebuilt/keylayout/s3c-keypad.kl:system/usr/keylayout/s3c-keypad.kl \
     device/samsung/SGH-T959/prebuilt/keylayout/sec_jack.kl:system/usr/keylayout/sec_jack.kl \
@@ -84,61 +41,8 @@ PRODUCT_COPY_FILES += \
     device/samsung/SGH-T959/prebuilt/keychars/qwerty.kcm.bin:system/usr/keychars/qwerty.kcm.bin \
     device/samsung/SGH-T959/prebuilt/keychars/qwerty2.kcm.bin:system/usr/keychars/qwerty2.kcm.bin  
 
-
-#
-# Vold
-#
 PRODUCT_COPY_FILES += \
     device/samsung/SGH-T959/prebuilt/vold.fstab:system/etc/vold.fstab 
-
-#
-# Camera
-#
-PRODUCT_COPY_FILES += \
-    device/samsung/SGH-T959/prebuilt/camera/libarccamera.so:system/lib/libarccamera.so \
-    device/samsung/SGH-T959/prebuilt/camera/libcamerafirmwarejni.so:system/lib/libcamerafirmwarejni.so \
-    device/samsung/SGH-T959/prebuilt/camera/libcamera.so:system/lib/libcamera.so \
-    device/samsung/SGH-T959/prebuilt/camera/libseccameraadaptor.so:system/lib/libseccameraadaptor.so \
-    device/samsung/SGH-T959/prebuilt/camera/libseccamera.so:system/lib/libseccamera.so
-
-#
-# RIL
-#
-PRODUCT_COPY_FILES += \
-    device/samsung/SGH-T959/prebuilt/ril/libril.so:system/lib/libril.so \
-    device/samsung/SGH-T959/prebuilt/ril/libreference-ril.so:system/lib/libreference-ril.so \
-    device/samsung/SGH-T959/prebuilt/ril/libsecril-client.so:system/lib/libsecril-client.so \
-    device/samsung/SGH-T959/prebuilt/ril/drexe:system/bin/drexe \
-    device/samsung/SGH-T959/prebuilt/ril/efsd:system/bin/efsd \
-    device/samsung/SGH-T959/prebuilt/ril/efsd30:system/bin/efsd30 \
-    device/samsung/SGH-T959/prebuilt/ril/rilclient-test:system/bin/rilclient-test
-
-#
-# OMX
-#
-PRODUCT_COPY_FILES += \
-    device/samsung/SGH-T959/prebuilt/omx/libs263domxoc.so:system/lib/libs263domxoc.so \
-    device/samsung/SGH-T959/prebuilt/omx/libs263eomxoc.so:system/lib/libs263eomxoc.so \
-    device/samsung/SGH-T959/prebuilt/omx/libs264domxoc.so:system/lib/libs264domxoc.so \
-    device/samsung/SGH-T959/prebuilt/omx/libs264eomxoc.so:system/lib/libs264eomxoc.so \
-    device/samsung/SGH-T959/prebuilt/omx/libsaacdomxoc.so:system/lib/libsaacdomxoc.so \
-    device/samsung/SGH-T959/prebuilt/omx/libsaaceomxoc.so:system/lib/libsaaceomxoc.so \
-    device/samsung/SGH-T959/prebuilt/omx/libsac3domxoc.so:system/lib/libsac3domxoc.so \
-    device/samsung/SGH-T959/prebuilt/omx/libsamrdomxoc.so:system/lib/libsamrdomxoc.so \
-    device/samsung/SGH-T959/prebuilt/omx/libsamreomxoc.so:system/lib/libsamreomxoc.so \
-    device/samsung/SGH-T959/prebuilt/omx/libsdiv3domxoc.so:system/lib/libsdiv3domxoc.so \
-    device/samsung/SGH-T959/prebuilt/omx/libsflacdomxoc.so:system/lib/libsflacdomxoc.so \
-    device/samsung/SGH-T959/prebuilt/omx/libsmp3domxoc.so:system/lib/libsmp3domxoc.so \
-    device/samsung/SGH-T959/prebuilt/omx/libsmp4fmocn.so:system/lib/libsmp4fmocn.so \
-    device/samsung/SGH-T959/prebuilt/omx/libsmp4vdomxoc.so:system/lib/libsmp4vdomxoc.so \
-    device/samsung/SGH-T959/prebuilt/omx/libsmp4veomxoc.so:system/lib/libsmp4veomxoc.so \
-    device/samsung/SGH-T959/prebuilt/omx/libsvc1domxoc.so:system/lib/libsvc1domxoc.so \
-    device/samsung/SGH-T959/prebuilt/omx/libswmadomxoc.so:system/lib/libswmadomxoc.so \
-    device/samsung/SGH-T959/prebuilt/omx/libswmv7domxoc.so:system/lib/libswmv7domxoc.so \
-    device/samsung/SGH-T959/prebuilt/omx/libswmv8domxoc.so:system/lib/libswmv8domxoc.so \
-
-# libspeech
-PRODUCT_COPY_FILES += device/samsung/SGH-T959/prebuilt/audio/libspeech.so:system/lib/libspeech.so
 
 ifeq ($(TARGET_PREBUILT_KERNEL),)
 LOCAL_KERNEL := device/samsung/SGH-T959/kernel
