@@ -50,7 +50,7 @@ BT_ALT_STACK := true
 BRCM_BTL_INCLUDE_A2DP := true
 BRCM_BT_USE_BTL_IF := true
 
-BOARD_EGL_CFG := device/samsung/SGH-T959/prebuilt/egl/egl.cfg
+BOARD_EGL_CFG := device/samsung/SGH-T959/prebuilt/egl.cfg
 
 BOARD_KERNEL_CMDLINE := no_console_suspend=1 console=null
 BOARD_KERNEL_BASE := 0x02e00000
