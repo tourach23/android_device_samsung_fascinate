@@ -122,7 +122,7 @@ PRODUCT_COPY_FILES += \\
     vendor/samsung/__DEVICE__/proprietary/etc/wifi/bcm4329_aps.bin:system/etc/wifi/bcm4329_aps.bin \\
     vendor/samsung/__DEVICE__/proprietary/etc/wifi/bcm4329_mfg.bin:system/etc/wifi/bcm4329_mfg.bin \\
     vendor/samsung/__DEVICE__/proprietary/etc/wifi/bcm4329_sta.bin:system/etc/wifi/bcm4329_sta.bin \\
-    vendor/samsung/__DEVICE__/proprietary/etc/wifi/wlservice:system/bin/wlservice
+    vendor/samsung/__DEVICE__/proprietary/bin/wlservice:system/bin/wlservice
 
 #
 # Display (3D)
