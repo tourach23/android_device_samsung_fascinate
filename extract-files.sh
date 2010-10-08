@@ -35,6 +35,7 @@ bin/efsd
 bin/efsd30
 bin/rilclient-test
 bin/wlservice
+bin/tvoutserver
 
 etc/asound.conf
 etc/wifi/nvram_net.txt
@@ -43,16 +44,20 @@ etc/wifi/bcm4329_aps.bin
 etc/wifi/bcm4329_mfg.bin
 etc/wifi/bcm4329_sta.bin
 
-lib/libarccamera.so
-lib/libcamerafirmwarejni.so
-lib/libcamera.so
-lib/libseccameraadaptor.so
-lib/libseccamera.so
 lib/libclientgps.so
 lib/libsecgps.so
 lib/libril.so
 lib/libreference-ril.so
 lib/libsecril-client.so
+lib/libspeech.so
+lib/libwlservice.so
+
+lib/libarccamera.so
+lib/libcamerafirmwarejni.so
+lib/libcamera.so
+lib/libseccameraadaptor.so
+lib/libseccamera.so
+
 lib/libs263domxoc.so
 lib/libs263eomxoc.so
 lib/libs264domxoc.so
@@ -72,8 +77,14 @@ lib/libsvc1domxoc.so
 lib/libswmadomxoc.so
 lib/libswmv7domxoc.so
 lib/libswmv8domxoc.so
-lib/libspeech.so
-lib/libwlservice.so
+
+lib/lib_tvoutengine.so
+lib/libtvout.so
+lib/libtvout_jni.so
+lib/libtvoutfimc.so
+lib/libtvouthdmi.so
+lib/libtvoutservice.so
+lib/libs3cjpeg.so
 
 lib/egl/libEGL_POWERVR_SGX540_120.so
 lib/egl/libGLES_android.so
@@ -111,8 +122,8 @@ done
 PRODUCT_COPY_FILES := \\
     vendor/samsung/__DEVICE__/proprietary/lib/libclientgps.so:obj/lib/libclientgps.so \\
     vendor/samsung/__DEVICE__/proprietary/lib/libsecgps.so:obj/lib/libsecgps.so \\
-    vendor/samsung/__DEVICE__/proprietary/lib/libsecril-client.so:obj/lib/libsecril-client.so \\
-    vendor/samsung/__DEVICE__/proprietary/lib/libcamera.so:obj/lib/libcamera.so
+    vendor/samsung/__DEVICE__/proprietary/lib/libsecril-client.so:obj/lib/libsecril-client.so 
+
 #
 # Wifi
 #
@@ -194,7 +205,20 @@ PRODUCT_COPY_FILES += \\
     vendor/samsung/__DEVICE__/proprietary/lib/libsvc1domxoc.so:system/lib/libsvc1domxoc.so \\
     vendor/samsung/__DEVICE__/proprietary/lib/libswmadomxoc.so:system/lib/libswmadomxoc.so \\
     vendor/samsung/__DEVICE__/proprietary/lib/libswmv7domxoc.so:system/lib/libswmv7domxoc.so \\
-    vendor/samsung/__DEVICE__/proprietary/lib/libswmv8domxoc.so:system/lib/libswmv8domxoc.so \\
+    vendor/samsung/__DEVICE__/proprietary/lib/libswmv8domxoc.so:system/lib/libswmv8domxoc.so
+
+#
+# TV-Out
+#
+PRODUCT_COPY_FILES += \\
+    vendor/samsung/__DEVICE__/proprietary/lib/lib_tvoutengine.so:system/lib/lib_tvoutengine.so \\
+    vendor/samsung/__DEVICE__/proprietary/lib/libtvout_jni.so:system/lib/libtvout_jni.so \\
+    vendor/samsung/__DEVICE__/proprietary/lib/libtvoutfimc.so:system/lib/libtvoutfimc.so \\
+    vendor/samsung/__DEVICE__/proprietary/lib/libtvouthdmi.so:system/lib/libtvouthdmi.so \\
+    vendor/samsung/__DEVICE__/proprietary/lib/libtvoutservice.so:system/lib/libtvoutservice.so \\
+    vendor/samsung/__DEVICE__/proprietary/lib/libtvout.so:system/lib/libtvout.so \\
+    vendor/samsung/__DEVICE__/proprietary/lib/libs3cjpeg.so:system/lib/libs3cjpeg.so \\
+    vendor/samsung/__DEVICE__/proprietary/bin/tvoutserver:system/bin/tvoutserver
 
 EOF
 
