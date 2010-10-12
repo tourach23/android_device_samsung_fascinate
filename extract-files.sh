@@ -31,11 +31,8 @@ done
 
 FILES="
 bin/drexe
-bin/efsd
-bin/efsd30
 bin/rilclient-test
 bin/wlservice
-bin/tvoutserver
 
 etc/asound.conf
 etc/wifi/nvram_net.txt
@@ -44,11 +41,12 @@ etc/wifi/bcm4329_aps.bin
 etc/wifi/bcm4329_mfg.bin
 etc/wifi/bcm4329_sta.bin
 
-lib/libclientgps.so
 lib/libsecgps.so
 lib/libril.so
 lib/libreference-ril.so
+lib/libreference-cdma-sms.so
 lib/libsecril-client.so
+lib/libsec-ril40.so
 lib/libspeech.so
 lib/libwlservice.so
 
@@ -78,12 +76,6 @@ lib/libswmadomxoc.so
 lib/libswmv7domxoc.so
 lib/libswmv8domxoc.so
 
-lib/lib_tvoutengine.so
-lib/libtvout.so
-lib/libtvout_jni.so
-lib/libtvoutfimc.so
-lib/libtvouthdmi.so
-lib/libtvoutservice.so
 lib/libs3cjpeg.so
 
 lib/egl/libEGL_POWERVR_SGX540_120.so
@@ -93,7 +85,7 @@ lib/egl/libGLESv2_POWERVR_SGX540_120.so
 
 lib/hw/copybit.s5pc110.so
 lib/hw/lights.default.so
-lib/hw/sensors.SGH-T959.so
+lib/hw/sensors.SCH-I500.so
 lib/hw/gralloc.s5pc110.so
 "
 
@@ -151,7 +143,7 @@ PRODUCT_COPY_FILES += \\
 PRODUCT_COPY_FILES += \\
     vendor/samsung/__DEVICE__/proprietary/lib/hw/copybit.s5pc110.so:system/lib/hw/copybit.s5pc110.so \\
     vendor/samsung/__DEVICE__/proprietary/lib/hw/lights.default.so:system/lib/hw/lights.default.so \\
-    vendor/samsung/__DEVICE__/proprietary/lib/hw/sensors.SGH-T959.so:system/lib/hw/sensors.SGH-T959.so \\
+    vendor/samsung/__DEVICE__/proprietary/lib/hw/sensors.SCH-I500.so:system/lib/hw/sensors.SGH-T959.so \\
     vendor/samsung/__DEVICE__/proprietary/lib/hw/gralloc.s5pc110.so:system/lib/hw/gralloc.s5pc110.so
 
 #
@@ -171,9 +163,8 @@ PRODUCT_COPY_FILES += \\
     vendor/samsung/__DEVICE__/proprietary/lib/libril.so:system/lib/libril.so \\
     vendor/samsung/__DEVICE__/proprietary/lib/libreference-ril.so:system/lib/libreference-ril.so \\
     vendor/samsung/__DEVICE__/proprietary/lib/libsecril-client.so:system/lib/libsecril-client.so \\
+    vendor/samsung/__DEVICE__/proprietary/lib/libsecril-client.so:system/lib/libsec-ril40.so \\
     vendor/samsung/__DEVICE__/proprietary/bin/drexe:system/bin/drexe \\
-    vendor/samsung/__DEVICE__/proprietary/bin/efsd:system/bin/efsd \\
-    vendor/samsung/__DEVICE__/proprietary/bin/efsd30:system/bin/efsd30 \\
     vendor/samsung/__DEVICE__/proprietary/bin/rilclient-test:system/bin/rilclient-test
 
 #
@@ -207,18 +198,6 @@ PRODUCT_COPY_FILES += \\
     vendor/samsung/__DEVICE__/proprietary/lib/libswmv7domxoc.so:system/lib/libswmv7domxoc.so \\
     vendor/samsung/__DEVICE__/proprietary/lib/libswmv8domxoc.so:system/lib/libswmv8domxoc.so
 
-#
-# TV-Out
-#
-PRODUCT_COPY_FILES += \\
-    vendor/samsung/__DEVICE__/proprietary/lib/lib_tvoutengine.so:system/lib/lib_tvoutengine.so \\
-    vendor/samsung/__DEVICE__/proprietary/lib/libtvout_jni.so:system/lib/libtvout_jni.so \\
-    vendor/samsung/__DEVICE__/proprietary/lib/libtvoutfimc.so:system/lib/libtvoutfimc.so \\
-    vendor/samsung/__DEVICE__/proprietary/lib/libtvouthdmi.so:system/lib/libtvouthdmi.so \\
-    vendor/samsung/__DEVICE__/proprietary/lib/libtvoutservice.so:system/lib/libtvoutservice.so \\
-    vendor/samsung/__DEVICE__/proprietary/lib/libtvout.so:system/lib/libtvout.so \\
-    vendor/samsung/__DEVICE__/proprietary/lib/libs3cjpeg.so:system/lib/libs3cjpeg.so \\
-    vendor/samsung/__DEVICE__/proprietary/bin/tvoutserver:system/bin/tvoutserver
 
 EOF
 
