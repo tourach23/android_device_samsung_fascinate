@@ -34,7 +34,7 @@ $(call inherit-product-if-exists, vendor/samsung/SGH-T959/SGH-T959-vendor.mk)
 ## (3)  Finally, the least specific parts, i.e. the non-GSM-specific aspects
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.sf.lcd_density=240 \
-    rild.libpath=/system/lib/libreference-ril.so \
+    rild.libpath=/system/lib/libsec-ril40.so \
     rild.libargs=-d /dev/ttyS0 \
     wifi.interface=eth0 \
     wifi.supplicant_scan_interval=15
@@ -48,10 +48,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Vibrant uses high-density artwork where available
 PRODUCT_LOCALES := hdpi
 
-DEVICE_PACKAGE_OVERLAYS += device/samsung/SGH-T959/overlay
+DEVICE_PACKAGE_OVERLAYS += device/samsung/SCH-I500/overlay
 
 # media profiles and capabilities spec
-$(call inherit-product, device/samsung/SGH-T959/media_a1026.mk)
+$(call inherit-product, device/samsung/SCH-I500/media_a1026.mk)
 # media config xml file
 PRODUCT_COPY_FILES += \
     device/samsung/SGH-T959/media_profiles.xml:system/etc/media_profiles.xml
@@ -60,7 +60,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     frameworks/base/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml \
     frameworks/base/data/etc/android.hardware.camera.flash-autofocus.xml:system/etc/permissions/android.hardware.camera.flash-autofocus.xml \
-    frameworks/base/data/etc/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml \
+    frameworks/base/data/etc/android.hardware.telephony.cdma.xml:system/etc/permissions/android.hardware.telephony.cdma.xml \
     frameworks/base/data/etc/android.hardware.location.gps.xml:system/etc/permissions/android.hardware.location.gps.xml \
     frameworks/base/data/etc/android.hardware.wifi.xml:system/etc/permissions/android.hardware.wifi.xml \
     frameworks/base/data/etc/android.hardware.sensor.proximity.xml:system/etc/permissions/android.hardware.sensor.proximity.xml \
@@ -69,23 +69,23 @@ PRODUCT_COPY_FILES += \
 
 # Keylayout / Keychars
 PRODUCT_COPY_FILES += \
-    device/samsung/SGH-T959/prebuilt/keylayout/s3c-keypad.kl:system/usr/keylayout/s3c-keypad.kl \
-    device/samsung/SGH-T959/prebuilt/keylayout/sec_jack.kl:system/usr/keylayout/sec_jack.kl \
-    device/samsung/SGH-T959/prebuilt/keylayout/AVRCP.kl:system/usr/keylayout/AVRCP.kl \
-    device/samsung/SGH-T959/prebuilt/keylayout/melfas-touchkey.kl:system/usr/keylayout/melfas-touchkey.kl \
-    device/samsung/SGH-T959/prebuilt/keylayout/qwerty.kl:system/usr/keylayout/qwerty.kl \
-    device/samsung/SGH-T959/prebuilt/keychars/s3c-keypad.kcm.bin:system/usr/keychars/s3c-keypad.kcm.bin \
-    device/samsung/SGH-T959/prebuilt/keychars/sec_jack.kcm.bin:system/usr/keychars/sec_jack.kcm.bin \
-    device/samsung/SGH-T959/prebuilt/keychars/melfas-touchkey.kcm.bin:system/usr/keychars/melfas-touchkey.kcm.bin \
-    device/samsung/SGH-T959/prebuilt/keychars/qwerty.kcm.bin:system/usr/keychars/qwerty.kcm.bin \
-    device/samsung/SGH-T959/prebuilt/keychars/qwerty2.kcm.bin:system/usr/keychars/qwerty2.kcm.bin  
+    device/samsung/SCH-I500/prebuilt/keylayout/s3c-keypad.kl:system/usr/keylayout/s3c-keypad.kl \
+    device/samsung/SCH-I500/prebuilt/keylayout/sec_jack.kl:system/usr/keylayout/sec_jack.kl \
+    device/samsung/SCH-I500/prebuilt/keylayout/AVRCP.kl:system/usr/keylayout/AVRCP.kl \
+    device/samsung/SCH-I500/prebuilt/keylayout/melfas-touchkey.kl:system/usr/keylayout/melfas-touchkey.kl \
+    device/samsung/SCH-I500/prebuilt/keylayout/qwerty.kl:system/usr/keylayout/qwerty.kl \
+    device/samsung/SCH-I500/prebuilt/keychars/s3c-keypad.kcm.bin:system/usr/keychars/s3c-keypad.kcm.bin \
+    device/samsung/SCH-I500/prebuilt/keychars/sec_jack.kcm.bin:system/usr/keychars/sec_jack.kcm.bin \
+    device/samsung/SCH-I500/prebuilt/keychars/melfas-touchkey.kcm.bin:system/usr/keychars/melfas-touchkey.kcm.bin \
+    device/samsung/SCH-I500/prebuilt/keychars/qwerty.kcm.bin:system/usr/keychars/qwerty.kcm.bin \
+    device/samsung/SCH-I500/prebuilt/keychars/qwerty2.kcm.bin:system/usr/keychars/qwerty2.kcm.bin  
 
 PRODUCT_COPY_FILES += \
-    device/samsung/SGH-T959/prebuilt/vold.fstab:system/etc/vold.fstab 
+    device/samsung/SCH-I500/prebuilt/vold.fstab:system/etc/vold.fstab 
 
 # Kernel
 ifeq ($(TARGET_PREBUILT_KERNEL),)
-LOCAL_KERNEL := device/samsung/SGH-T959/kernel
+LOCAL_KERNEL := device/samsung/SCH-I500/kernel
 else
 LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
 endif
@@ -97,8 +97,8 @@ PRODUCT_COPY_FILES += \
 $(call inherit-product, build/target/product/full.mk)
 
 
-PRODUCT_NAME := full_vibrant
-PRODUCT_DEVICE := SGH-T959
-PRODUCT_MODEL := Vibrant
-PRODUCT_BRAND := samsung
+PRODUCT_NAME := fascinate
+PRODUCT_BRAND := verizon
+PRODUCT_DEVICE := fascinate
+PRODUCT_MODEL := SCH-I500
 PRODUCT_MANUFACTURER := Samsung
